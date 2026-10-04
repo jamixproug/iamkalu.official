@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>KALU OFFICIAL — Music, Life, Vibes from Kampala</title>
+<meta name="description" content="KALU OFFICIAL (@iamkalu.official): music and short videos from Kampala, Uganda.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,800&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#14101c;--bg2:#1d1729;--ink:#f3eee6;--mute:#a79fb4;--red:#e5322d;--gold:#f5b82e;--line:#2e2740;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#f6f1ea;--bg2:#ece4d8;--ink:#1c1626;--mute:#60566e;--line:#d8cdbd;--red:#c9231f;--gold:#9a6a00}}
+:root[data-theme="light"]{--bg:#f6f1ea;--bg2:#ece4d8;--ink:#1c1626;--mute:#60566e;--line:#d8cdbd;--red:#c9231f;--gold:#9a6a00}
+:root[data-theme="dark"]{--bg:#14101c;--bg2:#1d1729;--ink:#f3eee6;--mute:#a79fb4;--line:#2e2740;--red:#e5322d;--gold:#f5b82e}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:400 1.05rem/1.65 "Instrument Sans",system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Black",sans-serif;line-height:1.02;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+section{padding:5.5rem 0}
+
+header{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font:800 1.15rem "Bricolage Grotesque",sans-serif;text-decoration:none;letter-spacing:.02em}
+.logo i{display:inline-block;width:.6em;height:.6em;background:var(--red);border-radius:50%;margin-left:.3em}
+nav{display:flex;gap:1.4rem}
+nav a{text-decoration:none;color:var(--mute);font-weight:600;font-size:.95rem}
+nav a:hover{color:var(--ink)}
+
+.hero{position:relative;padding:4rem 0 5rem;overflow:hidden}
+.bars{position:absolute;inset:auto 0 0 0;height:55%;display:flex;align-items:flex-end;gap:1.2%;padding:0 1%;opacity:.22;pointer-events:none}
+.bars span{flex:1;background:linear-gradient(var(--red),var(--gold));border-radius:6px 6px 0 0;height:20%;animation:eq 1.4s ease-in-out infinite alternate}
+@keyframes eq{to{height:var(--h)}}
+.hero .wrap{position:relative}
+.hero h1{font-size:clamp(5rem,26vw,15rem);font-weight:800;margin:.5rem 0 1rem}
+.hero h1 b{color:var(--red);font-weight:800}
+.hero p.lead{max-width:30ch;font-size:1.35rem;color:var(--ink)}
+.hero .loc{color:var(--mute);margin-top:.6rem}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem}
+.btn{display:inline-block;padding:.85rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;border:2px solid var(--ink);transition:transform .15s,background .15s}
+.btn.main{background:var(--red);border-color:var(--red);color:#fff}
+.btn:hover{transform:translateY(-2px)}
+.btn.ghost:hover{background:var(--ink);color:var(--bg)}
+
+h2{font-size:clamp(2rem,6vw,3.4rem);margin-bottom:1.5rem}
+.about{display:grid;gap:2.5rem;grid-template-columns:1.2fr 1fr;align-items:start}
+.about p{max-width:60ch;color:var(--mute)}
+.about p+p{margin-top:1rem}
+.facts{border-left:3px solid var(--gold);padding-left:1.4rem;display:grid;gap:1.2rem}
+.facts dt{color:var(--mute);font-size:.9rem}
+.facts dd{font:800 1.8rem "Bricolage Grotesque",sans-serif}
+
+.vids{background:var(--bg2)}
+.grid{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));max-width:720px}
+.card{display:block;text-decoration:none;background:var(--bg);border:1px solid var(--line);border-radius:16px;overflow:hidden;transition:transform .2s,border-color .2s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.thumb{aspect-ratio:9/12;display:flex;align-items:flex-end;padding:1.2rem;position:relative}
+.t1{background:linear-gradient(160deg,#3b2f2a,#12100f 70%)}
+.t2{background:linear-gradient(160deg,#25402c,#0e1a12 70%)}
+.thumb strong{font:800 1.6rem/1.05 "Bricolage Grotesque",sans-serif;color:#fff}
+.thumb em{position:absolute;top:1rem;right:1rem;font-style:normal;font-weight:600;font-size:.85rem;background:rgba(0,0,0,.55);color:#fff;padding:.2rem .7rem;border-radius:999px}
+.card p{padding:1rem 1.2rem;color:var(--mute);font-size:.95rem}
+.note{margin-top:1.6rem;color:var(--mute)}
+
+.vibes{display:grid;gap:1.4rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.vibes div{border-top:3px solid var(--red);padding-top:1rem}
+.vibes h3{font-size:1.8rem;margin-bottom:.4rem}
+.vibes p{color:var(--mute)}
+
+.contact{background:var(--bg2)}
+form{display:grid;gap:1rem;max-width:520px}
+label{font-weight:600;font-size:.95rem}
+input,textarea{width:100%;margin-top:.35rem;padding:.8rem 1rem;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+textarea{min-height:120px;resize:vertical}
+.msg{min-height:1.5em;color:var(--gold);font-weight:600}
+footer{padding:2rem 0;color:var(--mute);font-size:.9rem;border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
+
+@media(max-width:720px){nav{gap:1rem}nav a:nth-child(n+4){display:none}.about{grid-template-columns:1fr}section{padding:4rem 0}}
+@media(prefers-reduced-motion:reduce){.bars span{animation:none;height:var(--h)}html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#top">KALU<i></i></a>
+    <nav aria-label="Main">
+      <a href="#about">About</a><a href="#videos">Videos</a><a href="#vibes">Vibes</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="bars" id="bars" aria-hidden="true"></div>
+    <div class="wrap">
+      <h1>KALU<b>.</b></h1>
+      <p class="lead">Music, life and vibes. One day at a time.</p>
+      <p class="loc">Kampala, Uganda</p>
+      <div class="cta">
+        <a class="btn main" href="https://www.tiktok.com/@iamkalu.official" target="_blank" rel="noopener">Follow on TikTok</a>
+        <a class="btn ghost" href="#videos">Watch the latest</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap about">
+      <div>
+        <h2>Just being me.</h2>
+        <p>KALU OFFICIAL is a Kampala creator making short videos about music, everyday life and good energy. Every clip is one honest moment, shared as it happens.</p>
+        <p>The page is just getting started, so you're early. Follow along and be part of the story from the beginning.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Handle</dt><dd>@iamkalu.official</dd></div>
+        <div><dt>Home base</dt><dd>Kampala, UG</dd></div>
+        <div><dt>Total video views</dt><dd id="views">785</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="videos" class="vids">
+    <div class="wrap">
+      <h2>Latest videos</h2>
+      <div class="grid">
+        <a class="card" href="https://www.tiktok.com/@iamkalu.official" target="_blank" rel="noopener">
+          <div class="thumb t1"><em>559 views</em><strong>Sorry, Death. Not today.</strong></div>
+          <p>Open on TikTok</p>
+        </a>
+        <a class="card" href="https://www.tiktok.com/@iamkalu.official" target="_blank" rel="noopener">
+          <div class="thumb t2"><em>226 views</em><strong>Can it happen???</strong></div>
+          <p>Open on TikTok</p>
+        </a>
+      </div>
+      <p class="note">More videos land on TikTok first. Follow to see them as they drop.</p>
+    </div>
+  </section>
+
+  <section id="vibes">
+    <div class="wrap">
+      <h2>What you'll find here</h2>
+      <div class="vibes">
+        <div><h3>Music</h3><p>Guitar, headphones on, and sounds that set the mood for the day.</p></div>
+        <div><h3>Life</h3><p>Real moments from Kampala, with no filter on the story.</p></div>
+        <div><h3>Vibes</h3><p>Short clips that make you stop scrolling and feel something.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <h2>Say hello</h2>
+      <p style="margin-bottom:1.5rem;color:var(--mute)">Email <a href="mailto:Kalulejamir33@gmail.com">Kalulejamir33@gmail.com</a><br>Call or WhatsApp <a href="tel:+256763873852">0763 873 852</a></p>
+      <form id="form" novalidate>
+        <label>Your name<input id="n" name="name" autocomplete="name" required></label>
+        <label>Your email<input id="e" name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea id="m" name="message" required></textarea></label>
+        <button class="btn main" type="submit">Send message</button>
+        <p class="msg" id="out" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr">2026</span> KALU OFFICIAL</span>
+    <a href="https://www.tiktok.com/@iamkalu.official" target="_blank" rel="noopener">@iamkalu.official on TikTok</a>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Equalizer bars
+  var box=document.getElementById('bars');
+  for(var i=0;i<28;i++){
+    var s=document.createElement('span');
+    s.style.setProperty('--h',(25+Math.random()*75)+'%');
+    s.style.animationDelay=(-Math.random()*1.4)+'s';
+    s.style.animationDuration=(0.9+Math.random()*1.1)+'s';
+    box.appendChild(s);
+  }
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  // Contact form: opens the visitor's email app. Replace the address below with your own.
+  var TO='Kalulejamir33@gmail.com';
+  var f=document.getElementById('form'),out=document.getElementById('out');
+  f.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var n=f.n.value.trim(),e=f.e.value.trim(),m=f.m.value.trim();
+    if(!n||!/^\S+@\S+\.\S+$/.test(e)||!m){out.textContent='Enter your name, a valid email and a message.';return;}
+    var body=encodeURIComponent(m+'\n\n— '+n+' ('+e+')');
+    location.href='mailto:'+TO+'?subject='+encodeURIComponent('Message for KALU OFFICIAL')+'&body='+body;
+    out.textContent='Your email app is opening. Press send to finish.';
+  });
+})();
+</script>
+</body>
+</html>
